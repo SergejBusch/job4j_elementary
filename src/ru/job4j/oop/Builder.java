@@ -2,7 +2,7 @@ package ru.job4j.oop;
 
 public class Builder extends Engineer {
 
-    private boolean needGlasses = true;
+    private boolean needGlasses = false;
 
     public void boreHoles(Hole hole) {
     }
