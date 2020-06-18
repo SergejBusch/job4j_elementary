@@ -9,23 +9,19 @@ public class PointTest {
 
     @Test
     public void distanceTest1() {
-        int x1 = 2;
-        int y1 = 2;
-        int x2 = 5;
-        int y2 = 5;
-        double expected = 4.24;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(3, 4);
+        Point b = new Point(8, 9);
+        double expected = 7.07;
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void distanceTest2() {
-        int x1 = 3;
-        int y1 = 3;
-        int x2 = 9;
-        int y2 = 9;
-        double expected = 8.48;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double expected = 2.0;
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 }
