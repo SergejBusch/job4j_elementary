@@ -10,24 +10,18 @@ public class Shop {
         shop.print(products);
         System.out.println();
         shop.print(shop.delete(products, 0));
-        System.out.println();
-        shop.print(shop.sort(products));
 
     }
 
     public Product[] delete(Product[] products, int index) {
         products[index] = null;
-        return products;
-    }
-
-    public Product[] sort(Product[] products) {
         for (int i = 0; i < products.length; i++) {
             if (products[i] == null) {
                 for (int j = i; j < products.length - 1; j++) {
                     products[j] = products[j + 1];
                 }
-                products[products.length - 1] = null;
             }
+            products[products.length - 1] = null;
         }
         return products;
     }
