@@ -7,13 +7,20 @@ public class Shop {
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
         Shop shop = new Shop();
-        shop.delete(products, 0);
         shop.print(products);
+        System.out.println();
+        shop.print(shop.delete(products, 0));
+        System.out.println();
+        shop.print(shop.sort(products));
 
     }
 
     public Product[] delete(Product[] products, int index) {
         products[index] = null;
+        return products;
+    }
+
+    public Product[] sort(Product[] products) {
         for (int i = 0; i < products.length; i++) {
             if (products[i] == null) {
                 for (int j = i; j < products.length - 1; j++) {
