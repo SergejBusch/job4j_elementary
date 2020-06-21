@@ -8,10 +8,14 @@ public class MagicBall {
         Scanner input = new Scanner(System.in);
         System.out.println("Я великий Оракул. Что ты хочешь узнать? ");
         input.nextLine();
-        switch (new Random().nextInt(3)) {
-            case 1 -> System.out.println("yes");
-            case 2 -> System.out.println("no");
-            default -> System.out.println("maybe");
+        int number = new Random().nextInt(3);
+        if (number == 0) {
+            System.out.println("yes");
+        } else if (number == 1) {
+            System.out.println("no");
+        } else {
+            System.out.println("maybe");
         }
+
     }
 }
