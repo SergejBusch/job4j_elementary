@@ -47,6 +47,7 @@ public class BankService {
                 return accounts.get(index);
             }
         }
+        return null;
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
