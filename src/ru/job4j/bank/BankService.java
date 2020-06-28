@@ -44,7 +44,7 @@ public class BankService {
         for (Account account : accounts) {
             if (account.getRequisite().equals(requisite)) {
                 int index = accounts.indexOf(account);
-                return accounts.get(index);
+                return index < 0 ? null : accounts.get(index);
             }
         }
         return null;
@@ -60,7 +60,8 @@ public class BankService {
         if (destAccount != null) {
             srcAccount.setBalance(srcAccount.getBalance() - amount);
             destAccount.setBalance(destAccount.getBalance() + amount);
+            return true;
         }
-        return true;
+        return false;
     }
 }
